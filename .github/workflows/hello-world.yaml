@@ -1,0 +1,21 @@
+name: hello world
+
+on: 
+  push:
+    branches: 
+      - main
+  workflow_dispatch:
+
+jobs:
+  global_ref:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: hello!
+        id: hello
+        uses: ./
+        with:
+          who-to-greet: "test account"
+      - name: action output test
+        run: echo "output time: "

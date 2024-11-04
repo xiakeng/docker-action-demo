@@ -18,4 +18,4 @@ jobs:
         with:
           who-to-greet: "test account"
       - name: action output test
-        run: echo "output time: "
+        run: echo "output time"
